@@ -46,12 +46,13 @@ void push()
 		printf("\nOverflow!!");
 	}
 
+	else
 	{
 		printf("\nEnter the element to be added onto the stack: ");
-
+		scanf("%d", &x);
 		top = top + 1;
 		inp_array[top] = x;
-
+	}
 }
 void pop()
 {
@@ -66,9 +67,11 @@ void pop()
 	}
 }
 void show()
+{
 
 	if (top == -1)
 	{
+		printf("\nUnderflow!!");
 
 	}
 	else
