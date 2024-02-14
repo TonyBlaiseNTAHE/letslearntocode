@@ -14,7 +14,7 @@ public class School {
     public void setId(int id) { 
         this.id = id;
     }
-    public int getId(int id) {
+    public int getId(int id) { 
         return this.id;
         
     }
