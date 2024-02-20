@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fetch JSON from API and map lat lon</title>
+</head>
+<body>
+
+    <h1> Where is the data</h1>
+
+    <p>
+        squadName: <span id="sq"></span><br>
+        homeTown: <span id="hom"></span>
+    </p>
+    <script>
+        const api_url = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json'
+        async function getData() {
+            const response  = await fetch(api_url);
+            const data = await response.json()
+            //console.log(data.squadName);
+            const {squadName, homeTown} = data;
+            document.getElementById('sq').textContent = squadName;
+            document.getElementById('hom').textContent = homeTown;
+        }
+        getData();
+    </script>
+</body>
+</html>
