@@ -15,7 +15,7 @@ public class EmployeeMGTSystem {
         boolean condition = true;
         final String URL = "jdbc:mysql://localhost:3306/Employee";
         final String username = "root";
-        final String password = "****";
+        final String password = "%password%";
 
         try (Connection con = DriverManager.getConnection(URL, username, password)) {
             while (condition) {
