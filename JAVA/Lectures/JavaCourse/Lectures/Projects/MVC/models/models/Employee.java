@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class Employee {
 
     private int id; 
@@ -77,5 +79,19 @@ public class Employee {
     public String getWorkingHours(String workingHours) {
         return this.workingHours;
     }
+    public void addEmloyee(){
 
+    }
+    public void deleteEmployee(){
+
+    }
+    public void updateEmloyee(){
+
+    }
+    public void getAllEmloyee(){
+
+    }
+    public void retrieveEmloyee(){
+
+    }
 }

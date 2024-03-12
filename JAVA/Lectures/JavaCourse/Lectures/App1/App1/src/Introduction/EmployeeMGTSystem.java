@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 public class EmployeeMGTSystem {
     public static void main(String[] args) {
-        // Declaration and initialization
         boolean condition = true;
         final String URL = "jdbc:mysql://localhost:3306/Employee";
         final String username = "root";
@@ -51,12 +50,9 @@ public class EmployeeMGTSystem {
                         String empSupervisor = sc.next();
                         System.out.println("Enter the working hours of the employee: ");
                         String empWorkingHours = sc.next();
-                        // Prepare the SQL statement with placeholders
                         String query = "INSERT INTO Software_engr (id, name, Department, Position, Salary, Contact_Info, Address, Supervisor, Working_Hours) " +
                                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-                        // Create a PreparedStatement
                         try (PreparedStatement pstmt = con.prepareStatement(query)) {
-                            // Set parameter values
                             pstmt.setInt(1, empId);
                             pstmt.setString(2, empName);
                             pstmt.setString(3, empDep);
@@ -66,7 +62,6 @@ public class EmployeeMGTSystem {
                             pstmt.setString(7, empAddress);
                             pstmt.setString(8, empSupervisor);
                             pstmt.setString(9, empWorkingHours);
-                            // Execute the query
                             int rowsAffected = pstmt.executeUpdate();
                             if (rowsAffected > 0) {
                                 System.out.println("Employee registered successfully.");
@@ -107,7 +102,6 @@ public class EmployeeMGTSystem {
                             String Address  =rs1.getString("Address");
                             String Supervisor = rs1.getString("Supervisor");
                             String Working_Hours = rs1.getString("Working_Hours");
-                            // Print the data
                             System.out.printf("| %-3d| %-8s| %-13s| %-11s| %-9d| %-26s| %-10s| %-11s| %-14s|%n", id, name, Department, Position, Salary, Contact_Info, Address, Supervisor, Working_Hours);
                         }
                         System.out.println("+----+---------+--------------+------------+----------+---------------------------+-----------+------------+---------------+");
@@ -129,7 +123,6 @@ public class EmployeeMGTSystem {
                             String Address  =rs.getString("Address");
                             String Supervisor = rs.getString("Supervisor");
                             String Working_Hours = rs.getString("Working_Hours");
-                            // Print the data
                             System.out.printf("| %-3d| %-8s| %-13s| %-11s| %-9d| %-26s| %-10s| %-11s| %-14s|%n", id, name, Department, Position, Salary, Contact_Info, Address, Supervisor, Working_Hours);
                         }
                         System.out.println("+----+---------+--------------+------------+----------+---------------------------+-----------+------------+---------------+");
