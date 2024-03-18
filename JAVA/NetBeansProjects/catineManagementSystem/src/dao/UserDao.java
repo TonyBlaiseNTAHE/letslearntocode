@@ -31,4 +31,19 @@ public class UserDao {
         }
         return user;
     }
+    public static  User getSecurityQuestion(String email) {
+        User user =  null;
+        try {
+            ResultSet rs = DbOperations.getData("select * from user email = ' "+ email + "'");
+            while (rs.next()) {
+                user = new User();
+                user.setSecurityQuestion(rs.getString("securityQuestion"));
+                user.setAnswer(rs.getString("answer"));
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return user;
+    }
 }
