@@ -4,12 +4,14 @@
  */
 package catine.reservationmgtsm;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ntahetonyblaise
  */
 public class Home extends javax.swing.JFrame {
-
+    public String email;
     /**
      * Creates new form Home
      */
@@ -17,8 +19,16 @@ public class Home extends javax.swing.JFrame {
         initComponents();
     }
 
-    public Home(String email) {
+    public Home(String userEmail) {
         initComponents();
+        email = userEmail;
+        
+        if (!email.equals("tonyntahe@gmail.com"))
+        {
+            btnManageCategory.setVisible(false);
+            btnNewProduct.setVisible(false);
+            btnViewEditDelete.setVisible(false);
+        }
     }
 
     /**
@@ -30,21 +40,117 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        btnLogout = new javax.swing.JButton();
+        btnPlaceOrder = new javax.swing.JButton();
+        btnViewBill = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        btnManageCategory = new javax.swing.JButton();
+        btnNewProduct = new javax.swing.JButton();
+        btnViewEditDelete = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnLogout.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-logout-30.png"))); // NOI18N
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 120, 60));
+
+        btnPlaceOrder.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnPlaceOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-order-24.png"))); // NOI18N
+        btnPlaceOrder.setText("Place Order");
+        btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlaceOrderActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 150, 70));
+
+        btnViewBill.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnViewBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-bill-64.png"))); // NOI18N
+        btnViewBill.setText("View Bill & Order Placed");
+        btnViewBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewBillActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnViewBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 280, -1));
+
+        btnExit.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-exit-30.png"))); // NOI18N
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 10, 90, 70));
+
+        btnManageCategory.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnManageCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-manage-50.png"))); // NOI18N
+        btnManageCategory.setText("Manage Category");
+        btnManageCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageCategoryActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 680, 220, 70));
+
+        btnNewProduct.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnNewProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-new-product-50.png"))); // NOI18N
+        btnNewProduct.setText("New Product");
+        getContentPane().add(btnNewProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 670, 190, 70));
+
+        btnViewEditDelete.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnViewEditDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-edit-50.png"))); // NOI18N
+        btnViewEditDelete.setText("View, Edit & Delete Product");
+        getContentPane().add(btnViewEditDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 670, 290, 74));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/9019805.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 3050, 2000));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+         int response = JOptionPane.showConfirmDialog(null, "Do you reaaly want to logout", "Select", JOptionPane.YES_NO_OPTION);
+        
+        if (response == 0) {
+            setVisible(false);
+            new login().setVisible(true);
+        }
+        
+    }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceOrderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPlaceOrderActionPerformed
+
+    private void btnViewBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBillActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnViewBillActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+         int response = JOptionPane.showConfirmDialog(null, "Do you really want to close Application", "Select", JOptionPane.YES_NO_OPTION);
+        
+        if (response == 0) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnManageCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCategoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnManageCategoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,5 +188,13 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnManageCategory;
+    private javax.swing.JButton btnNewProduct;
+    private javax.swing.JButton btnPlaceOrder;
+    private javax.swing.JButton btnViewBill;
+    private javax.swing.JButton btnViewEditDelete;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
