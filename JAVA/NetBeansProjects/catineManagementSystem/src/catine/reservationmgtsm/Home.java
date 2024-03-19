@@ -47,7 +47,7 @@ public class Home extends javax.swing.JFrame {
         btnManageCategory = new javax.swing.JButton();
         btnNewProduct = new javax.swing.JButton();
         btnViewEditDelete = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -61,7 +61,7 @@ public class Home extends javax.swing.JFrame {
                 btnLogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 120, 60));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, 70));
 
         btnPlaceOrder.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnPlaceOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-order-24.png"))); // NOI18N
@@ -71,7 +71,7 @@ public class Home extends javax.swing.JFrame {
                 btnPlaceOrderActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, 150, 70));
+        getContentPane().add(btnPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 220, 70));
 
         btnViewBill.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnViewBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-bill-64.png"))); // NOI18N
@@ -81,7 +81,7 @@ public class Home extends javax.swing.JFrame {
                 btnViewBillActionPerformed(evt);
             }
         });
-        getContentPane().add(btnViewBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 280, -1));
+        getContentPane().add(btnViewBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 280, 80));
 
         btnExit.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-exit-30.png"))); // NOI18N
@@ -91,7 +91,7 @@ public class Home extends javax.swing.JFrame {
                 btnExitActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 10, 90, 70));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 160, 80));
 
         btnManageCategory.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnManageCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-manage-50.png"))); // NOI18N
@@ -101,21 +101,21 @@ public class Home extends javax.swing.JFrame {
                 btnManageCategoryActionPerformed(evt);
             }
         });
-        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 680, 220, 70));
+        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 220, 70));
 
         btnNewProduct.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnNewProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-new-product-50.png"))); // NOI18N
         btnNewProduct.setText("New Product");
-        getContentPane().add(btnNewProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 670, 190, 70));
+        getContentPane().add(btnNewProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, 240, 70));
 
         btnViewEditDelete.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         btnViewEditDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-edit-50.png"))); // NOI18N
         btnViewEditDelete.setText("View, Edit & Delete Product");
-        getContentPane().add(btnViewEditDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 670, 290, 74));
+        getContentPane().add(btnViewEditDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, 290, 74));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/9019805.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 3050, 2000));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Screenshot 2024-03-19 7.22.04 AM.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,6 +150,7 @@ public class Home extends javax.swing.JFrame {
 
     private void btnManageCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCategoryActionPerformed
         // TODO add your handling code here:
+        new ManageCategory().setVisible(true);
     }//GEN-LAST:event_btnManageCategoryActionPerformed
 
     /**
@@ -195,6 +196,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnPlaceOrder;
     private javax.swing.JButton btnViewBill;
     private javax.swing.JButton btnViewEditDelete;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
