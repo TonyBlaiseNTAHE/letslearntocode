@@ -16,8 +16,11 @@ public class Tables {
             String userTable;
             userTable = "create table user(id int AUTO_INCREMENT primary key, name varchar(200), email varchar(200), Phonenumber varchar(10), address varchar(200), password varchar(200), status varchar(20), UNIQUE(email));";
             String adminDetails = "insert user(name, email, Phonenumber, address, password, status) values('TonyHac', 'tonyntahe@gmail.com', '0782020123', 'Kimironko', '1234567890','true')";
+            String categoryTable = "create table category(id int AUTO_INCREMENT primary key, name varchar(200))";
             DbOperations.setDataOrDelete(userTable, "User Table Created Successfully");
             DbOperations.setDataOrDelete(adminDetails, "Admin details added Successfully");
+            DbOperations.setDataOrDelete(categoryTable, "category table created succefully");
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }

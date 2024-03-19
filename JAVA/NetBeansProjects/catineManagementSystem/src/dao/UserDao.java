@@ -31,7 +31,7 @@ public class UserDao {
         }
         return user;
     }
-    public static  User getSecurityQuestion(String email) {
+    /*public static  User getSecurityQuestion(String email) {
         User user =  null;
         try {
             ResultSet rs = DbOperations.getData("select * from user email = ' "+ email + "'");
@@ -45,5 +45,5 @@ public class UserDao {
             JOptionPane.showMessageDialog(null, e);
         }
         return user;
-    }
+    }*/
 }
