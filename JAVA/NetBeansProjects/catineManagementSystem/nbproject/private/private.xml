@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/catine/reservationmgtsm/signup.java</file>
-            <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/catine/reservationmgtsm/Home.java</file>
+            <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/model/Category.java</file>
+            <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/catine/reservationmgtsm/ManageCategory.java</file>
             <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/catine/reservationmgtsm/login.java</file>
+            <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/dao/CategoryDao.java</file>
             <file>file:/home/ntahetonyblaise/letslearntocode/JAVA/NetBeansProjects/catineManagementSystem/src/model/User.java</file>
         </group>
     </open-files>
