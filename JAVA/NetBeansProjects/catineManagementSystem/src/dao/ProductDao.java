@@ -22,13 +22,14 @@ public class ProductDao {
         ArrayList<Product> productList = new ArrayList<>();
         
         try {
-            ResultSet r = (ResultSet) DbOperations.getData("select * from product");
+            ResultSet rs = (ResultSet) DbOperations.getData("select * from product");
             
-            while (r.next()) {
+            while (rs.next()) {
                 Product p = new Product();
-                p.setId(r.getInt("id"));
-                p.setName(r.getString("name"));
-                p.setCategory(r.getString("category"));
+                p.setId(rs.getInt("id"));
+                p.setName(rs.getString("name"));
+                p.setCategory(rs.getString("category"));
+                p.setPrice(rs.getString("price"));
                 productList.add(p);
             }
             
